@@ -31,11 +31,17 @@ orgs.newOrg('openhw.atesor', 'eclipse-atesor') {
         "llm-agents",
         "porting",
         "risc-v",
-        "riscv64"
+        "riscv64",
         "sw-enablement",
       ],
       web_commit_signoff_required: false,
       secrets: [
+        orgs.newRepoSecret('ANTHROPIC_API_KEY') {
+          value: "********",
+        },
+        orgs.newRepoSecret('ANTHROPIC_ORG') {
+          value: "********",
+        },
         orgs.newRepoSecret('GOOGLE_API_KEY') {
           value: "********",
         },
